@@ -3,7 +3,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :camper_not_found
 rescue_from ActiveRecord::RecordInvalid, with: :camper_invalid
 
     def index
-        render json: Camper.all, status: :ok #, serializer: CamperSerializer
+        render json: Camper.all, status: :ok
     end
 
     def show
